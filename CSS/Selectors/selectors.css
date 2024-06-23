@@ -1,0 +1,86 @@
+/* Element Selector */
+/* h1{
+    color:green; 
+ }
+ 
+ strong{
+     color:red;
+ } */
+ 
+ 
+ /* Id Selector */
+ 
+ /* #special{
+     text-transform: uppercase;
+ } */
+ 
+ 
+ /* Class Selector */
+ 
+ /* .one{
+    
+    color:blue;
+     
+ } */
+ 
+ /* Attribute Selector */
+ 
+ /* a[href='http://google.com']{
+     font-size: 24px;
+     color:palevioletred;
+ }
+ 
+ input[type="text"]{
+     background-color: peachpuff;
+ }
+ 
+ input[disabled]{
+     background-color: royalblue;
+ }
+  */
+ 
+ /* Universal selector */
+ 
+ /* *{
+     border:1px solid gray;
+ } */
+ 
+
+ /* Descendent Selector */
+
+ /* ul li{
+    background-color: lightblue;
+ } */
+
+
+ /* Direct Child Selector  */
+
+ /* ul>li{
+    background-color: aqua;
+ } */
+
+
+/* Advance Selector */
+
+ul:nth-of-type(1)
+{
+    background-color: palevioletred;
+    
+}
+
+ 
+ul:nth-of-type(2)
+{
+    background-color: green;
+}
+ 
+ul:nth-of-type(1):hover
+
+{
+    background-color: crimson;
+}
+
+ul:nth-of-type(2):hover
+{
+    background-color: yellow;
+}
