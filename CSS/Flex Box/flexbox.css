@@ -1,0 +1,41 @@
+h1{
+    border: 2px solid blue;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.parent{
+    border: 2px solid black;
+    height: 700px;
+    display: flex;
+    /* flex-direction: column;  */
+    /* flex-direction: row;*/
+      /* flex-direction: column-reverse; */
+     /* flex-direction:row-reverse; */
+     justify-content: space-around;
+    /* justify-content: space-between; */
+     /* justify-content: space-evenly; */
+     /* flex-wrap:  wrap-reverse; */
+     flex-wrap: wrap;
+/* justify-content: center; */
+     /* align-items: center; */
+
+} 
+.child{
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+    
+}
+#one{
+    background-color: aqua;
+}
+#two{
+    background-color: rgb(38, 0, 255);
+}
+#three{
+    background-color: rgb(255, 0, 212);
+}
+#four{
+    background-color: rgb(255, 0, 119);
+}

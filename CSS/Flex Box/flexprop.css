@@ -1,0 +1,66 @@
+
+.parent
+{
+    height: 700px;
+  display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   flex-wrap: wrap;
+   align-content: space-evenly;
+}
+
+#one
+{
+    height: 100px;
+    /* width: 100px; */
+    max-width: 300px;
+   background-color: crimson;
+   flex-basis: 500px;
+   /* flex-grow: 2; */
+   
+}
+
+#two
+{
+    height: 100px;
+    width: 100px;
+   background-color: lightblue;
+}
+#three
+{
+    height: 100px;
+    width: 100px;
+   background-color: greenyellow;
+}
+#four
+{
+    height: 100px;
+    width: 100px;
+   background-color: gray;
+}
+
+p
+{
+    margin: auto;
+    /* width: 400px; */
+    max-width: 400px;
+    min-width: none;
+    border: 2px solid black;
+}
+
+div
+{
+    width: 300px;
+    height: 300px;
+    background-color: crimson;
+
+}
+
+@media (max-width: 500px)
+{
+     div    
+    {
+        background-color: blue;
+         
+    }
+}
