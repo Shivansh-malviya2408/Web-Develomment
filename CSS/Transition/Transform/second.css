@@ -1,0 +1,51 @@
+
+body{
+     
+    perspective: 900px;
+}
+
+.parent
+{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    margin: 30px auto;
+    transform-style: preserve-3d;
+    transition-duration: 2s;
+    
+}
+
+.parent:hover{
+    transform: rotateY(180deg);
+    transition-duration: 1s;
+    
+}
+
+.A
+{
+    backface-visibility: hidden;
+}
+.A>img
+
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    backface-visibility: hidden;
+   
+}
+
+.B
+{
+    height: 100%;
+    width: 100%;
+    background-color: crimson;
+    color: white;
+    position: absolute;
+    transform: rotateY(180deg);
+    text-align: center;
+
+
+}
+

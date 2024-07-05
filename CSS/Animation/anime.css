@@ -1,0 +1,84 @@
+
+ 
+.bounce
+{
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+     border:2px solid black;
+    background: linear-gradient(blue,red);
+    animation-iteration-count: infinite; 
+     /* border-top-right-radius:50%; */
+     font-size: 150px;
+    margin:auto;
+    animation-name: kabir;
+    animation-duration: 900ms;
+    animation-direction: alternate;
+    animation-timing-function:ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 300px black;
+     
+   
+}
+
+/* .bounce:hover{
+    animation-name: kabir;
+    animation-duration: 900ms;
+ } */
+/* @keyframes kabir
+{
+    0%
+    {
+        width: 200px;
+        background-color: lightblue;
+    }
+
+     25%
+     {
+        width: 400px;
+        background-color: violet;
+     }
+
+     50%
+     {
+        width: 400px;
+        height: 400px;
+        background-color: yellowgreen;
+     }
+
+     75%
+     {
+        width: 50vw;
+        height: 400px;
+        border-radius: 50%;
+        background-color: blue;
+     }
+
+
+     100%
+     {
+        width: 92vw;
+        height: 800px;
+        background-color: pink;
+     }
+}  */
+
+@keyframes kabir
+{
+    0%
+    {
+        transform: translateY(0px), rotate3d(360px);
+    }
+    
+    100%{
+        
+        transform: translateY(80vh);
+    }
+     
+       
+    
+}
