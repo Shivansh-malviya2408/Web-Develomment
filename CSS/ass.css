@@ -1,0 +1,148 @@
+
+ .nav
+ {
+    background-color: black;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    
+ }
+
+
+.name
+ {
+
+     /* border: 2px solid white; */
+    font-size: 20px;
+     
+    margin-left: 20px;
+    color: orangered;
+    justify-content: center;
+    min-width: 70px
+    
+ }
+ .name:hover
+  {
+    transition: 0.5s;
+    font-size: 30px;
+
+}
+
+ .menu
+ {
+    /* border: 2px solid white; */
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
+   margin-right: 5px;
+ }
+ .navlink:hover
+  {
+    transition: 0.5s;
+    font-size: 30px;
+}
+
+
+
+.foot
+{
+    /* border: 2px solid white; */
+    font-size: 20px;
+    background-color: orangered;
+    color: white;
+    margin-right: 20px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    
+}
+.foot:hover
+  {
+   
+    font-size: 30px;
+    flex-basis: 70px;
+    transition: 0.5s;
+     
+}
+
+
+
+@media (max-width:412px)
+{
+    .nav{
+        /* border: 2px solid white; */
+        background-color: black;
+        display: inline-block;
+        width: 412px;
+        height: auto;
+        text-align: center;
+        border-radius: 10px;
+
+    }
+
+  .name
+  {
+     
+    display: inline-block;
+    flex-basis: 412px;
+     
+     color: orangered;
+     height: auto;
+     /* width: 412px; */
+     
+  }
+  .name:hover
+  {
+    transition: 0.9s;
+    font-size: 30px;
+}
+
+
+  .menu
+  {
+    display: inline-block;
+    height: auto;
+    width: 412px;
+    
+  }
+
+  .navlink:hover
+  {
+    transition: 0.9s;
+    font-size: 30px;
+}
+  
+  .navlink
+  {
+    border: 1px solid white;
+    display: inline-block;
+    width: 412px;
+    height: auto;
+    background-color: black;
+    color: white;
+  }
+
+  .foot
+  {
+    display: inline-block;
+    width: 412px;
+    height: auto;
+    background-color:orangered;
+    color: white;
+  }
+
+  .foot:hover
+  {
+    transition: 0.9s;
+    font-size: 30px;
+}
+ 
+}
+
+ 
+ 
+     
