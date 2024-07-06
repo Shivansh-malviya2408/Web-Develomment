@@ -1,0 +1,79 @@
+.fa-bars
+{
+    font-size: 30px;
+    transition-duration: 1s;
+}
+ 
+.parent
+{
+    display: flex;
+    
+
+}
+
+.menu
+{
+    width: 100vw;
+   transition-duration: 2s;
+   display: none;
+    /* display: flex;
+    align-items: center;
+    justify-content:space-evenly; */
+   
+
+     
+}
+
+ 
+.fa-bars:hover
+{
+     transform: rotate(90deg);
+     transition-duration: 500ms;
+     
+  
+ 
+    /* .menu
+     {
+       background-color: red;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly;
+        visibility: hidden;
+     } 
+      */
+     /* {
+         transform: translateY(400px);
+     } */
+}
+
+.parent:hover{
+    
+    .menu
+    {
+        
+        transition-duration: 500ms;
+        width: 30vw;
+        
+        visibility: visible;
+         display: flex;
+         align-items: center;
+         justify-content:space-evenly;
+          
+    }
+}
+
+ 
+
+ 
+
+  .bar
+  {
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    border-radius: 25%;
+    margin-top: 5px;
+  }
+
+   
