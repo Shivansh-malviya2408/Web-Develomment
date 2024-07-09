@@ -1,0 +1,27 @@
+
+.gallery
+{
+    display: grid;
+    
+    border: 2px solid black;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows:400px 400px 400px;
+    gap:50px ;
+    padding: auto ;
+
+}
+
+.photo>img
+
+{
+    /* border-radius: 20%; */
+    
+    
+}
+
+.photo
+{
+    border: 2px solid black;
+    margin-left: 40px;
+    margin-top: 30px;
+}
