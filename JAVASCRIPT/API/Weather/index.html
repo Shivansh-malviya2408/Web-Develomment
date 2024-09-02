@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Document</title>
+
+
+    <style>
+        .card-template {
+            display: flex
+        }
+
+        .card-template>span:nth-child(1) {
+            width: 10vw;
+            /* border: 2px solid black; */
+            font-family: cursive;
+            font-size: 1.5vw;
+            font-weight: 900;
+        }
+
+        .card-template>span:nth-child(2) {
+            text-align: center;
+            /* border:2px solid black; */
+            width: 10vw;
+            text-align: center;
+            font-size: 1.5vw;
+            font-weight: 600;
+            text-transform: uppercase;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url(https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D);
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        .wrapper {
+
+            height: 60vh;
+            width: 30vw;
+            border-radius: 2vw;
+            display: flex;
+            flex-direction: column;
+            padding: 0.5vw 0vw;
+            backdrop-filter: 30px;
+            color: white;
+            background: rgba(255, 255, 255, 0.20);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border: 1px solid rgba(255, 255, 255, 0.18);
+
+            /* align-items: center; */
+
+        }
+
+        .wrapper>input {
+            width: 20vw;
+            height: 6vw;
+            margin: 1.1vw auto;
+            font-size: 1.8vw;
+            border-radius: 10px;
+            padding: 1vw 1vw;
+            outline: none;
+            border: none;
+            color: white;
+            border-bottom: 2px solid black;
+            text-align: center;
+            font-weight: 900;
+            background: transparent;
+
+
+            &::placeholder {
+                text-align: center;
+                font-size:1.3vw ;
+                color: white;
+            }
+
+        }
+
+        .wrapper>button {
+            width: 20vw;
+            height: 6vw;
+            margin: 0vw auto;
+            border-radius: 10px;
+            padding: 1vw 1vw;
+            border: none;
+            background-color: orange;
+            color: white;
+            font-weight: 900;
+        }
+
+        .wrapper>h1 {
+            font-size: 3vw;
+            color: white;
+        }
+
+        .card {
+             
+
+
+            height: calc(60vw - 13vw);
+          
+            margin: .5vw auto;
+            line-height: 3vw;
+            width: 20vw;
+            
+
+
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+
+    <!-- 4b5e17a0fce1f2de84e0be930f0613f7
+    https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key} -->
+
+    <div class="wrapper">
+
+        <h1><i class="ri-sun-cloudy-fill" style="color:orange;"></i> Weather <span style="color: orange; -webkit-text-stroke: 0.05vw; -webkit-text-stroke-color: black; -webkit-text-stroke-width: 0.1vw;">Infomatic</span></h1>
+
+        <input type="text" placeholder="Enter Your City">
+        <button>Submit</button>
+
+        <div class="card">
+
+            <div class="card-template">
+                <span>City:-</span>
+                <span class="card-name"></span>
+            </div>
+
+            <hr>
+
+            <div class="card-template">
+                <span>Temperature:-</span>
+                <span class="card-temp"></span>
+            </div>
+
+            <hr>
+
+            <div class="card-template">
+                <span>Humidity:-</span>
+                <span class="card-humidity"> </span>
+            </div>
+
+            <hr>
+
+            <div class="card-template">
+                <span>Weather:-</span>
+                <span class="card-main"> </span>
+            </div>
+            <hr>
+
+            <div class="card-template">
+                <span>Description:-</span>
+                <span class="card-descp"></span>
+            </div>
+            <hr>
+        </div>
+
+    </div>
+
+
+    <!-- <h3></h3> -->
+
+    <script>
+
+
+        let input = document.querySelector('input')
+        // let h3=document.querySelector('h3');
+        let submit = document.querySelector('button')
+        // let city ='';
+
+        let name = document.getElementsByClassName('card-name')
+        let temp = document.getElementsByClassName('card-temp')
+        let humidity = document.getElementsByClassName('card-humidity')
+        let main = document.getElementsByClassName('card-main')
+        let descp = document.getElementsByClassName('card-descp')
+
+        console.log(name);
+        console.log(name[0].innerText);
+
+
+
+
+        submit.addEventListener('click', () => {
+            let city = input.value;
+            let ApiKey = '4b5e17a0fce1f2de84e0be930f0613f7';
+
+
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${ApiKey}`)
+                .then((obj) => {
+                    return obj.json();
+                })
+                .then((data) => {
+                    console.log(data, "lo dekh lo");
+
+                    name[0].style.color = 'white'
+                    name[0].innerText = data.name;
+                    temp[0].innerText = Math.floor(data.main.temp - 273.15) + '\u00B0C' + '/' + Math.floor((data.main.temp - 273.15) * 9 / 5 + 32) + '\u00B0F';
+
+
+                    humidity[0].innerText = data.main.humidity;
+                    main[0].innerText = data.weather[0].main
+                    descp[0].innerText = data.weather[0].description
+
+                })
+                .catch((err) => {
+
+                    name[0].style.color = 'orangered'
+                    name[0].style.fontSize = '2.5vh'
+                    name[0].innerText = 'Incorrect'
+
+                })
+
+        })
+
+
+
+
+
+
+
+
+        // fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${ApiKey}`)
+        //     .then((obj) => {
+        //         return obj.json();
+        //     })
+        //     .then((data) => {
+        //          console.log(data);
+        //     })
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

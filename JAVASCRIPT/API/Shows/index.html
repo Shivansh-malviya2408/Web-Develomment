@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+
+    <div class="wrapper">
+        <div class="search-logo">
+
+            <h1 class="logo"><span style="color:red;">Show</span>Search</h1>
+
+            <div class="search">
+                <input type="text" placeholder="Search Your Shows Here">
+                <button> <i class="ri-search-line"></i></button>
+            </div>
+        </div>
+
+        <h1></h1>
+
+
+
+        <div id="list">
+
+
+        </div>
+        <div class="prev-next">
+            <button id="prev">&lt;</button>
+            <button id="next">&gt;</button>
+        </div>
+
+    </div>
+
+    <!-- <img src="" alt=""> -->
+
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+
+    <script>
+
+        let input = document.querySelector('input')
+        let btn = document.querySelector('button')
+        let list = document.getElementById('list')
+
+        let prev = document.getElementById('prev')
+        let next = document.getElementById('next')
+
+        // prev.style.opacity = '0';
+        // next.style.opacity = '0';
+
+        if (list) {
+
+
+
+            prev.addEventListener('click', () => {
+                list.scrollTo({
+
+                    left: list.scrollLeft - list.firstElementChild.offsetWidth,
+                    behavior: "smooth"
+                })
+            });
+
+
+            next.addEventListener('click', () => {
+                list.scrollTo({
+
+                    left: list.scrollLeft + list.firstElementChild.offsetWidth,
+                    behavior: "smooth"
+                })
+            })
+        }
+
+
+
+
+        function fetchData(searchText) {
+            axios.get(`https://api.tvmaze.com/search/shows?q=${searchText}`)
+                .then(function (response) {
+
+                    console.log(response);
+
+                    manipulateDom(response.data);
+
+                })
+                 
+
+        }
+
+        function manipulateDom(data) {
+            while (list.firstChild) {
+                list.firstChild.remove();
+            }
+
+
+            for (let i of data) {
+                if (i.show.image) {
+
+                   
+                    let img = document.createElement('img')
+                    // img.style.height = '20vh'
+                    // img.style.width = '20vw'
+                    img.setAttribute('src', i.show.image.original)
+                    list.appendChild(img)
+
+                   
+
+                }
+                prev.style.opacity = '1';
+                    next.style.opacity = '1';
+            }
+        }
+
+
+        btn.addEventListener('click', () => {
+            let searchText = input.value;
+            fetchData(searchText);
+
+
+        })
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

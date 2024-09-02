@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+</body>
+
+    <script>
+
+        let arr =[1,2,3,4,5,6]
+      
+    //     For Each function of Array
+
+    //    let newA = arr.forEach((a,b,c)=>
+    //    {
+    //       console.log(c);
+         
+    //    })
+
+   
+       
+        // Map Function of Array
+
+    // let newMap= arr.map((a,b,c)=>
+    //    {
+    //       console.log(c)
+          
+    //    })
+       
+    // let newFilter=arr.filter((a,b,c)=>
+
+    //  {
+    //     return a>3;
+    // }
+    // )
+
+    // console.log(newFilter);
+
+    arr.filter(function(a,b,c)
+    { 
+          if(a>3)
+          {
+            console.log(a);
+          }
+    }
+     
+    )
+
+    // console.log(newFilter);
+
+    let newReduce = arr.reduce(function (a,b,c,d)
+    {
+        return a+b;
+    })
+    
+    console.log(newReduce);
+
+    const arrowfunc = () =>
+    {
+
+    }
+    
+    
+        
+
+
+    </script>
+</html>

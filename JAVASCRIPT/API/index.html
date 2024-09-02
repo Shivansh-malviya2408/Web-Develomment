@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+     /* ul
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } */
+</style>
+
+<body>
+    
+<h1>API</h1>
+<ul>
+
+</ul>
+
+ 
+
+<script>
+
+
+    let space=' ';
+     let ul=document.querySelector('ul')
+     
+    
+
+    fetch('https://dummyjson.com/recipes').then((res)=>
+    {
+         return res.json()
+}).then((data)=>{
+
+    // p.innerText=data.recipes
+    console.log(data);
+
+      for (let i in data.recipes)
+      {
+        let li=document.createElement('li')
+        let img=document.createElement('img')
+        let att=document.createAttribute('src');
+    
+        li.innerText=  data.recipes[i].name;
+        att.value= data.recipes[i].image;
+        img.setAttributeNode(att);
+        
+        img.style.height='250px'
+        img.style.width='250px'
+        ul.append(img)
+        // ul.appendChild(li)
+         
+
+
+      }
+
+}
+)
+.catch((err)=>
+{
+    console.log(err);
+})
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

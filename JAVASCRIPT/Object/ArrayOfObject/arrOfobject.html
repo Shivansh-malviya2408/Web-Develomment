@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>Array of Objects</h1>
+
+
+</body>
+
+
+<script>
+
+console.log('Array of Objects');
+
+let objArr =
+[
+    {
+        id:1,
+        name:'Kabir',
+        isMale:true
+    },
+    {
+        id:2,
+        name:'Nikhil',
+        isMale:true
+    },
+    {
+        id:3,
+        name:'Harsh',
+        isMale:true
+    },
+    {
+        id:4,
+        name:'Shivam',
+        isMale:false
+    }
+];
+
+
+    for(let val in objArr)
+    {
+        console.log(objArr[val]);
+    }
+
+    console.log(objArr[0].name);
+
+
+    objArr.forEach(function(a,b,c)
+    {
+        console.log(c);
+    }
+    )
+
+    
+
+
+
+</script>
+
+
+</html>

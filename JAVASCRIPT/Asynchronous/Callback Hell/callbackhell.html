@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body></body>
+<script>
+    function step1(fn) {
+        setTimeout(() => {
+            console.log("Photo");
+            fn();
+        }, 2000);
+    }
+
+    function step2(fn) {
+        setTimeout(() => {
+            console.log("Filtered");
+            fn();
+        }, 2000);
+    }
+
+    function step3(fn) {
+        setTimeout(() => {
+            console.log("Captionnnnn");
+            // fn();
+        }, 3000);
+    }
+
+    function step4() {
+        setTimeout(() => {
+            console.log("Posted");
+        }, 1000);
+    }
+
+    //-   -   -   -   -     Calling of CallBack Hell     -   -   -   -   -   >   >   >   >
+
+    // step1(() => {
+    //     step2(() => {
+    //         step3(() => {
+    //             step4();
+    //         });
+    //     });
+    // });
+
+    // step1();
+    // step2();
+    // step3();
+    // step4();
+
+    // step1(()=>
+    // {
+    //     step2(function()
+    //     {
+    //         step3();
+    //     });
+    // })
+
+
+
+    // Another Example of Understanding Callback hell
+
+
+    function add1(fn)
+    {
+        console.log(5+5);
+        fn();
+    }
+
+    function add2()
+    {
+        console.log(10+10);
+    }
+
+
+    add1(function(){
+        add2();
+    })
+
+
+</script>
+
+</html>

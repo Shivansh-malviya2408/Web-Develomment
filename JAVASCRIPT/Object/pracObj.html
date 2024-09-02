@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+
+    <script> 
+    
+    // let obj=
+    // {
+    //     name:"Kabir",
+    //     age:18,
+    //     roll_no:143
+    // }
+
+    // console.log(obj.name);
+    // console.log(obj.age);
+    // console.log(obj.roll_no);
+
+
+    // We can also make function of printing obj members
+
+    // function showObj ()
+    // {
+    //     console.log(obj);
+    // }
+
+    // showObj();
+
+    
+    let Object = 
+    {
+        name:"Kabir",
+        age:"18",
+        roll_no:143,
+
+        printObj:function()
+        {
+            let finish="this is Info";
+            console.log(`First name:- ${this.name}`);
+            console.log(`Age :- ${this.age}`);
+            console.log(` Roll NO- ${this.roll_no}`);
+            
+            return finish;
+        },
+
+        sum:function() 
+        {
+          this.printObj();
+            
+        },
+       
+
+    }
+
+ 
+
+    
+        // console.log(Object.printObj());
+        let returnFun= Object.printObj();
+        console.log(returnFun);
+
+        
+
+
+    const newObj= 
+    {
+        name:"Kabir",
+        age:18,
+        isMale:true
+    }
+
+  console.log(newObj)
+  console.log(newObj.name)
+  console.log(newObj.age)
+  console.log(newObj.isMale)
+
+    // In Object there is two ways to change the value of the key in object
+
+    // first is below
+
+  newObj['name']="Shivansh";
+  newObj['age']=20;
+
+  console.log(newObj)
+    
+    // Second is below
+
+    newObj.name="Shivanshkabir";
+    newObj.age=25;
+    
+    console.log(newObj)
+
+     
+    </script>
+
+</body>
+</html>

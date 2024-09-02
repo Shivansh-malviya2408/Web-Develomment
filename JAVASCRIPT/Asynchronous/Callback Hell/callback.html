@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<h1 id="demo"></h1>
+
+</body>
+
+<script>
+
+    console.log("CallBack Function");
+
+    function add(x, y) {
+        console.log("Add Function");
+        return x + y;
+    }
+
+    function subtract(x, y) {
+        console.log("Subtract Function");
+        return x - y;
+    }
+
+
+    // This function will be used to call other function by taking parameters 
+
+    function allFunc(callBack, x, y) {
+        return callBack(x, y)
+    }
+
+
+    // This function will call the add()  function to add two numbers
+    // console.log(allFunc(add,10,20));
+
+    // This function will call the subtract() function to add two numbers
+    // console.log(allFunc(subtract,100,20));
+
+
+
+    // setInterval(myFunction,1000)
+
+     function myFunction ()
+     {
+        let d = new Date()
+        
+        document.getElementById('demo').innerHTML=
+
+        d.getHours() + ':' +
+        d.getMinutes() +':' +
+        d.getSeconds() ;
+
+     }
+
+        setTimeout(myFunction,5000);
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+</script>
+
+
+
+</html>

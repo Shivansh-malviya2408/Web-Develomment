@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+
+        .panel
+        {
+            background-color:lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hello
+        {
+            padding: 50px;
+            background-color:blanchedalmond;
+            text-align: center;
+            display: none;
+        }
+    </style>
+    
+
+</head>
+
+<body>
+
+    <h1>jQuery Library</h1>
+    <input type="number">
+    <button>Click Here</button>
+    <!-- <button id="fadein">Fade in</button> -->
+
+    <br>
+     
+    <div class="panel">Click to show the Panel </div>
+ 
+    <div class="hello">Hello this is the Panel</div>
+
+
+
+    <script src="jquery.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script>
+
+
+     //  $ (Dollar) is used to select the element in jQuery 
+    console.log($('h1'));
+
+
+
+        // css() is used to style the element and html document in jQuery
+
+        $('h1').css({
+            color: 'red',
+            height: '100px',
+            width: '200px',
+            border: '2px solid red',
+            borderRadius: '10px',
+            textAlign: 'centre'
+        }
+        )
+
+       
+
+
+
+
+        // .text() is used to get the inner text of element and we can also change the content of elemtn by passing the content in the parenthesis
+
+        console.log($('h1').text());
+
+
+        // attr() is used to get or set the attribute of the element
+
+        $('input').attr('type');
+        $('input').attr('type', 'password');
+
+        console.log($('input').attr('type'));
+
+
+
+        // fadeOut () will  fadeOut   the element 
+
+        // $('button').click(()=>
+        // {
+        //     // console.log('Button Clicked');
+        //     $('h1').fadeOut();
+
+        // })
+
+        // fadeIn () will  fadeIn  the element 
+
+        // $('#fadein').click(()=>
+        // {
+        //     $('h1').fadeIn();
+
+        // })
+
+
+        // toggle() will first fadeOut the element and then fadeOut..
+        // means it will run both the function one by one
+
+        // $('#fadein').click(()=>
+        // {
+        //     $('h1').toggle();
+
+        // })
+
+
+        $('body').ready(function () {
+            $('button').click(() => {
+                $('input').animate({ top: '200px' })
+            })
+        })
+
+
+        $('.panel').click(()=>
+        {
+            $('.hello').slideToggle()
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

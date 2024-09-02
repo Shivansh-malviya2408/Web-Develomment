@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+    <script>
+
+       let proMiseOne = new Promise((resolve,reject)=>
+       {
+            setTimeout(()=>
+            {
+                console.log("Promise 1 Called");
+                resolve();
+
+            },1000)
+            
+       })
+
+       proMiseOne.then(()=>
+       { 
+          console.log("Promise Called");
+       })
+
+
+
+        new Promise((resolve, reject)=>
+       {
+            setTimeout(function()
+            {
+                console.log("Anonymous Promise Called");
+                resolve();
+
+            },  2000)
+
+           
+        }).then(()=>
+        {
+            console.log("Anonymous Then Called");
+        })
+
+
+
+        const promiseThree = new Promise(function(resolve,reject)
+        {
+            setTimeout(function()
+            {
+                console.log("Promise Three Called");
+
+                resolve({username:"Kabir",id:123}) 
+                 
+
+            },3000)
+        })
+
+        promiseThree.then((resolve)=>
+        {
+             console.log(resolve);
+        })
+         
+     
+     
+    </script>
+
+
+</html>

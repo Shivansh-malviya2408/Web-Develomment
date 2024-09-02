@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1>Import Export</h1>
+
+    
+    
+    <script type="module">
+
+        // This is the method if we want to export the variable name same in both the files
+        // import {user} from './home.js'
+
+        // for Importing Multiple data
+        import {user,number,sum,} from './home.js'
+
+        //this is or
+     
+        console.log(user,'--- user imported');
+        console.log(number,'--- number imported');
+        
+
+     // This is the method if we don't want to export the variable name same in both the files.
+        // we can change it in the import file then we can use this method
+         
+        // This is default import of variable
+        import a from './home.js'
+     
+        console.log(a,'--- a imported');
+
+        // Calling of function that is exported
+            sum(5,5);
+
+      
+
+
+    </script>
+</body>
+</html>
